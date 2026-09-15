@@ -62,7 +62,7 @@ public class InvertConnectionAction extends SelectionAction {
             compoundCommand.add(new InvertConnectionCommand(relationship));
         }
 
-        execute(compoundCommand);
+        execute(compoundCommand.unwrap());
     }
 
     private Set<IArchimateRelationship> getValidRelationships() {

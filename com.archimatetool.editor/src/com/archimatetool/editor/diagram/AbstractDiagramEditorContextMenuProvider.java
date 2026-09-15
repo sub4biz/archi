@@ -19,6 +19,7 @@ import org.eclipse.ui.actions.ActionFactory;
 import com.archimatetool.editor.actions.ArchiActionFactory;
 import com.archimatetool.editor.diagram.actions.ConnectionRouterAction;
 import com.archimatetool.editor.diagram.actions.DefaultEditPartSizeAction;
+import com.archimatetool.editor.diagram.actions.DeleteBendpointsAction;
 import com.archimatetool.editor.diagram.actions.DeleteContainerAction;
 import com.archimatetool.editor.diagram.actions.ExportAsImageAction;
 import com.archimatetool.editor.diagram.actions.ExportAsImageToClipboardAction;
@@ -98,8 +99,18 @@ public abstract class AbstractDiagramEditorContextMenuProvider extends ContextMe
         menu.appendToGroup(GROUP_EDIT, action);
         
         // Delete Container
-        menu.appendToGroup(GROUP_EDIT, actionRegistry.getAction(DeleteContainerAction.ID));
+        action = actionRegistry.getAction(DeleteContainerAction.ID);
+        if(action.isEnabled()) {
+            menu.insertAfter(ActionFactory.DELETE.getId(), action);
+        }
         
+        // Delete connection bendpoints
+        action = actionRegistry.getAction(DeleteBendpointsAction.ID);
+        if(action.isEnabled()) {
+            menu.appendToGroup(GROUP_EDIT, action);
+        }
+        
+        // Lock object
         action = actionRegistry.getAction(LockObjectAction.ID);
         if(action.isEnabled()) {
             menu.appendToGroup(GROUP_EDIT, new Separator());
@@ -108,15 +119,24 @@ public abstract class AbstractDiagramEditorContextMenuProvider extends ContextMe
         
         menu.add(new Separator(GROUP_RENAME));
         
+        // Rename
         action = actionRegistry.getAction(ActionFactory.RENAME.getId());
-        menu.appendToGroup(GROUP_RENAME, action);
+        if(action.isEnabled()) {
+            menu.appendToGroup(GROUP_RENAME, action);
+        }
 
-        // Select Element in Tree
+        // Select Element in Model Tree
         menu.appendToGroup(GROUP_RENAME, new Separator());
-        menu.appendToGroup(GROUP_RENAME, actionRegistry.getAction(SelectElementInTreeAction.ID));
+        action = actionRegistry.getAction(SelectElementInTreeAction.ID);
+        if(action.isEnabled()) {
+            menu.appendToGroup(GROUP_RENAME, action);
+        }
         
         // Select objects of same type
-        menu.appendToGroup(GROUP_RENAME, actionRegistry.getAction(SelectSameObjectTypeAction.ID));
+        action = actionRegistry.getAction(SelectSameObjectTypeAction.ID);
+        if(action.isEnabled()) {
+            menu.appendToGroup(GROUP_RENAME, action);
+        }
         menu.appendToGroup(GROUP_RENAME, new Separator());
         
         menu.add(new Separator(GROUP_EXPORT));
