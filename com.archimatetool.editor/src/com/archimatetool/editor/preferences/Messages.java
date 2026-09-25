@@ -203,8 +203,6 @@ public class Messages extends NLS {
 
     public static String DiagramPreferencePage_24;
 
-    public static String DiagramPreferencePage_3;
-
     public static String DiagramPreferencePage_4;
 
     public static String DiagramPreferencePage_6;
@@ -308,6 +306,10 @@ public class Messages extends NLS {
     public static String GeneralPreferencePage_29;
 
     public static String GeneralPreferencePage_3;
+
+    public static String GeneralPreferencePage_30;
+
+    public static String GeneralPreferencePage_31;
 
     public static String GeneralPreferencePage_4;
 

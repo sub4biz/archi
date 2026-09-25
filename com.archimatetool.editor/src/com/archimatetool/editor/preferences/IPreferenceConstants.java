@@ -104,7 +104,6 @@ public interface IPreferenceConstants {
     String VIEW_TOOLTIPS = "viewTooltips";
     String EDIT_NAME_ON_NEW_OBJECT = "editNameOnNewObject";
     String SHOW_SPECIALIZATIONS_IN_PALETTE = "showSpecializationsInPalette";
-    String SHOW_QUICK_ADD_ON_TRIGGER = "showQuickAddOnTrigger";
 
     String DIAGRAM_OBJECT_RESIZE_BEHAVIOUR = "resizeBehaviour"; 
     String DIAGRAM_PASTE_SPECIAL_BEHAVIOR = "pasteSpecialBehavior";
@@ -149,7 +148,12 @@ public interface IPreferenceConstants {
     
     // Whether to add a note to the documentation field of relationships that have been changed to Association when setting a new concept type
     String ADD_DOCUMENTATION_NOTE_ON_RELATION_CHANGE = "addDocumentationNoteOnRelationChange";
+    
+    // Image scaling
     String SCALE_IMAGE_EXPORT = "scaleImageExport";
+    
+    // Option to use ImagePrintFigureOperation on Windows
+    String UPSCALE_IMAGE_EXPORT = "upscaleImageExport";
     
     // Animation
     String ANIMATE_VIEW = "animateView";

@@ -95,7 +95,6 @@ implements IPreferenceConstants {
         store.setDefault(VIEW_TOOLTIPS, true);
         store.setDefault(EDIT_NAME_ON_NEW_OBJECT, true);
         store.setDefault(SHOW_SPECIALIZATIONS_IN_PALETTE, true);
-        store.setDefault(SHOW_QUICK_ADD_ON_TRIGGER, true);
         
         store.setDefault(DIAGRAM_OBJECT_RESIZE_BEHAVIOUR, 0);
         store.setDefault(DIAGRAM_PASTE_SPECIAL_BEHAVIOR, 0);
@@ -135,8 +134,12 @@ implements IPreferenceConstants {
         store.setDefault(USE_LABEL_EXPRESSIONS_IN_ANALYSIS_TABLE, true);
 
         store.setDefault(ADD_DOCUMENTATION_NOTE_ON_RELATION_CHANGE, false);
+        
         // Windows and Mac use display scaling, Linux is 100% scaling
         store.setDefault(SCALE_IMAGE_EXPORT, PlatformUtils.isLinux() ? false : true);
+        
+        // On Windows
+        store.setDefault(UPSCALE_IMAGE_EXPORT, false);
         
         // Animation
         store.setDefault(ANIMATE_VIEW, false);
