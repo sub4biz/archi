@@ -146,8 +146,6 @@
       interface="true" eSuperTypes="#//ArchimateElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="TechnologyElement" abstract="true" interface="true"
       eSuperTypes="#//ArchimateElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TechnologyObject" abstract="true" interface="true"
-      eSuperTypes="#//TechnologyElement #//PassiveStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="PhysicalElement" abstract="true" interface="true"
       eSuperTypes="#//ArchimateElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="MotivationElement" abstract="true" interface="true"
@@ -158,8 +156,6 @@
       eSuperTypes="#//ArchimateElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="BehaviorElement" abstract="true" interface="true"
       eSuperTypes="#//ArchimateElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StrategyBehaviorElement" abstract="true"
-      interface="true" eSuperTypes="#//BehaviorElement #//StrategyElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="StructureElement" abstract="true" interface="true"
       eSuperTypes="#//ArchimateElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ActiveStructureElement" abstract="true"
@@ -209,7 +205,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ApplicationInterface" eSuperTypes="#//ApplicationElement #//ActiveStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ApplicationProcess" eSuperTypes="#//ApplicationElement #//BehaviorElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ApplicationService" eSuperTypes="#//ApplicationElement #//BehaviorElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Artifact" eSuperTypes="#//TechnologyObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Artifact" eSuperTypes="#//TechnologyElement #//PassiveStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Assessment" eSuperTypes="#//MotivationElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="BusinessActor" eSuperTypes="#//BusinessElement #//ActiveStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="BusinessCollaboration" eSuperTypes="#//BusinessElement #//ActiveStructureElement"/>
@@ -221,7 +217,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="BusinessProcess" eSuperTypes="#//BusinessElement #//BehaviorElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="BusinessRole" eSuperTypes="#//BusinessElement #//ActiveStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="BusinessService" eSuperTypes="#//BusinessElement #//BehaviorElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Capability" eSuperTypes="#//StrategyBehaviorElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Capability" eSuperTypes="#//StrategyElement #//BehaviorElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="CommunicationNetwork" eSuperTypes="#//TechnologyElement #//ActiveStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Contract" eSuperTypes="#//BusinessObject"/>
   <eClassifiers xsi:type="ecore:EClass" name="Constraint" eSuperTypes="#//MotivationElement"/>
@@ -238,7 +234,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Grouping" eSuperTypes="#//CompositeElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ImplementationEvent" eSuperTypes="#//ImplementationMigrationElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//CompositeElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Material" eSuperTypes="#//PhysicalElement #//TechnologyObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Material" eSuperTypes="#//PhysicalElement #//PassiveStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Meaning" eSuperTypes="#//MotivationElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//TechnologyElement #//ActiveStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Outcome" eSuperTypes="#//MotivationElement"/>
@@ -259,7 +255,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="TechnologyProcess" eSuperTypes="#//TechnologyElement #//BehaviorElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="TechnologyService" eSuperTypes="#//TechnologyElement #//BehaviorElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//MotivationElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ValueStream" eSuperTypes="#//StrategyBehaviorElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ValueStream" eSuperTypes="#//StrategyElement #//BehaviorElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="WorkPackage" eSuperTypes="#//ImplementationMigrationElement #//BehaviorElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="AccessRelationship" eSuperTypes="#//DependendencyRelationship">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="accessType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"

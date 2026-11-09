@@ -123,7 +123,6 @@ import com.archimatetool.model.ISketchModelActor;
 import com.archimatetool.model.ISketchModelSticky;
 import com.archimatetool.model.ISpecializationRelationship;
 import com.archimatetool.model.IStakeholder;
-import com.archimatetool.model.IStrategyBehaviorElement;
 import com.archimatetool.model.IStrategyElement;
 import com.archimatetool.model.IStructuralRelationship;
 import com.archimatetool.model.IStructureElement;
@@ -134,7 +133,6 @@ import com.archimatetool.model.ITechnologyEvent;
 import com.archimatetool.model.ITechnologyFunction;
 import com.archimatetool.model.ITechnologyInteraction;
 import com.archimatetool.model.ITechnologyInterface;
-import com.archimatetool.model.ITechnologyObject;
 import com.archimatetool.model.ITechnologyProcess;
 import com.archimatetool.model.ITechnologyService;
 import com.archimatetool.model.ITextAlignment;
@@ -299,10 +297,6 @@ public class ArchimateAdapterFactory extends AdapterFactoryImpl {
                 return createTechnologyElementAdapter();
             }
             @Override
-            public Adapter caseTechnologyObject(ITechnologyObject object) {
-                return createTechnologyObjectAdapter();
-            }
-            @Override
             public Adapter casePhysicalElement(IPhysicalElement object) {
                 return createPhysicalElementAdapter();
             }
@@ -321,10 +315,6 @@ public class ArchimateAdapterFactory extends AdapterFactoryImpl {
             @Override
             public Adapter caseBehaviorElement(IBehaviorElement object) {
                 return createBehaviorElementAdapter();
-            }
-            @Override
-            public Adapter caseStrategyBehaviorElement(IStrategyBehaviorElement object) {
-                return createStrategyBehaviorElementAdapter();
             }
             @Override
             public Adapter caseStructureElement(IStructureElement object) {
@@ -1199,20 +1189,6 @@ public class ArchimateAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link com.archimatetool.model.ITechnologyObject <em>Technology Object</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see com.archimatetool.model.ITechnologyObject
-     * @generated
-     */
-    public Adapter createTechnologyObjectAdapter() {
-        return null;
-    }
-
-    /**
      * Creates a new adapter for an object of class '{@link com.archimatetool.model.ITechnologyProcess <em>Technology Process</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
@@ -1489,20 +1465,6 @@ public class ArchimateAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createBehaviorElementAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class '{@link com.archimatetool.model.IStrategyBehaviorElement <em>Strategy Behavior Element</em>}'.
-     * <!-- begin-user-doc -->
-     * This default implementation returns null so that we can easily ignore cases;
-     * it's useful to ignore a case when inheritance will catch all the cases anyway.
-     * <!-- end-user-doc -->
-     * @return the new adapter.
-     * @see com.archimatetool.model.IStrategyBehaviorElement
-     * @generated
-     */
-    public Adapter createStrategyBehaviorElementAdapter() {
         return null;
     }
 
